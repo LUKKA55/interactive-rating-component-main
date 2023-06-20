@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+
+.container,
+.container-feedback {
+	width: 350px;
+	background-color: hsl(213, 19%, 18%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 15px;
+	padding: 25px;
+}
+
+.icon-estrela {
+	margin-bottom: 30px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: hsl(208, 10%, 26%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.titulo {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.description {
+	color: hsl(217, 12%, 63%);
+	font-size: 0.8rem;
+	margin-bottom: 20px;
+	line-height: 20px;
+}
+
+.constainer-form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.set-form input {
+	display: none;
+}
+
+.set-form input[type='radio'] + label {
+	width: 50px;
+	height: 50px;
+	background-color: hsl(208, 10%, 26%);
+	color: hsl(217, 12%, 63%);
+	border-radius: 50%;
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: none;
+}
+
+.set-form input[type='radio'] + label:hover {
+	background-color: #e6e6e680;
+	color: #fff;
+}
+
+.set-form input[type='radio']:checked + label {
+	background-color: #fc7613;
+	color: #fff;
+}
+
+.submit {
+	width: 100%;
+	border: none;
+	background-color: hsl(25, 97%, 53%);
+	color: white;
+	padding: 10px;
+	border-radius: 30px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.submit:hover {
+	background-color: white;
+	color: hsl(25, 97%, 53%);
+}
+
+.container-feedback {
+	z-index: 1000;
+}
+
+.img-feedback {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin-top: 10px;
+}
+
+.legenda-feedback {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	color: hsl(25, 81%, 44%);
+	font-size: 0.8rem;
+	text-align: center;
+	background-color: hsl(208, 10%, 26%);
+	width: 180px;
+	padding: 8px;
+	border-radius: 15px;
+	margin: 25px 0 25px 0;
+}
+
+.titulo-feedback {
+	color: white;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.description-feedback {
+	color: hsl(217, 12%, 63%);
+	text-align: center;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+@media ((max-width: 375px)) {
+	.container,
+	.container-feedback {
+		width: 300px;
+	}
+
+	.set-form input[type='radio'] + label {
+		width: 40px;
+		height: 40px;
+	}
+
+	.description-feedback {
+		font-size: 11px;
+	}
+}
